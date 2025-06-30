@@ -11,17 +11,16 @@
 <body>
     <!-- Header Section -->
     <header>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About Us.html">About Us</a></li>
-                <li><a href="Services.html" class="active">Services</a></li>
-                <li><a href="Events.html">Events</a></li>
-                <li><a href="Get-Involved.html">Get Involved</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
-        </nav>
+       <div class="menu-toggle" onclick="toggleMenu()">≅</div>
+    <nav id="navbar">
+        <ul>
+            <li><a href="Home Page.html" class="active">Home</a></li>
+            <li><a href="About Us.html">About Us</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Get-Involved.html">Get Involved</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
     </header>
 
     <!-- Hero Section -->
@@ -72,5 +71,10 @@
             </ul>
         </nav>
     </footer>
+    <script>
+    function toggleMenu() {
+        document.getElementById("navbar").classList.toggle("open");
+    }
+</script>
 </body>
 </html>
