@@ -201,4 +201,51 @@ footer {
     to {
         transform: translateY(0);
     }
+    .menu-toggle {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1100;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    header {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 3rem;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0044cc;
+        padding-left: 2rem;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+}
+
 }
