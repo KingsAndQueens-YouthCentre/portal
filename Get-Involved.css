@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7faff;
+    overflow-x: hidden; /* Prevent horizontal scrolling caused by animations */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: #0044cc;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 2rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #cce7ff;
+}
+
+/* Hero Section */
+#hero-get-involved {
+    text-align: center;
+    background: linear-gradient(to bottom, #0044cc, #66a3ff);
+    color: #fff;
+    padding: 5rem 1rem;
+}
+
+#hero-get-involved h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#hero-get-involved p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* Ways to Get Involved Section */
+#ways-to-get-involved {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #e6f2ff;
+    opacity: 1; /* Ensure visibility */
+    transform: none; /* Reset transformations */
+    transition: none; /* No delayed animations */
+}
+
+#ways-to-get-involved h2 {
+    font-size: 2rem;
+    color: #0044cc;
+    margin-bottom: 2rem;
+}
+
+#ways-to-get-involved .way {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#ways-to-get-involved .way:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#ways-to-get-involved h3 {
+    color: #0044cc;
+    margin-bottom: 1rem;
+}
+
+#ways-to-get-involved p {
+    color: #555;
+}
+
+/* Call to Action Section */
+#cta-get-involved {
+    text-align: center;
+    background-color: #0044cc;
+    color: #fff;
+    padding: 3rem 1rem;
+    opacity: 1; /* Ensure visibility */
+    transform: none; /* Reset transformations */
+    transition: none; /* No delayed animations */
+}
+
+#cta-get-involved h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #cce7ff;
+}
+
+#cta-get-involved p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+#cta-get-involved .btn {
+    background-color: #003399;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#cta-get-involved .btn:hover {
+    background-color: #002266;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #003366;
+    color: #fff;
+    padding: 1.5rem 0;
+}
+
+/* Animations */
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

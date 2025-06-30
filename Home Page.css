@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7faff;
+    overflow-x: hidden; /* Prevent horizontal scrolling caused by animations */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center; /* Center the navigation */
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: #0044cc;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center; /* Center the navigation items */
+}
+
+header nav ul li {
+    margin-left: 2rem;
+}
+
+header nav ul li:first-child {
+    margin-left: 0; /* Remove extra margin for the first item */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #cce7ff;
+}
+
+/* Welcome Section */
+#welcome {
+    text-align: center;
+    background: linear-gradient(to bottom, #0044cc, #66a3ff);
+    color: #fff;
+    padding: 5rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInScale 1.5s ease-in-out;
+}
+
+#welcome h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#welcome p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+#welcome .btn {
+    background-color: #003399;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#welcome .btn:hover {
+    background-color: #002266;
+    transform: scale(1.1);
+}
+
+/* Dashboards Section */
+#dashboards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Adjusts for smaller screens */
+    padding: 3rem 1rem;
+    background-color: #e6f2ff;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+#dashboards .dashboard {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 calc(25% - 2rem); /* Responsive layout */
+    max-width: 250px; /* Set a maximum width for smaller screens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#dashboards .dashboard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#dashboards h2 {
+    color: #0044cc;
+    margin-bottom: 1rem;
+}
+
+#dashboards p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem; /* Slightly smaller text */
+}
+
+#dashboards .btn {
+    background-color: #003399;
+    color: #fff;
+    padding: 0.5rem 1rem; /* Reduced button size */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+#dashboards .btn:hover {
+    background-color: #002266;
+    transform: scale(1.1);
+}
+
+ .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+      transform: rotateY(10deg);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border: 4px solid var(--purple);
+      border-radius: 10px;
+      transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05) rotateY(5deg);
+      box-shadow: 0 0 20px var(--gold);
+    }
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #003366;
+    color: #fff;
+    padding: 1.5rem 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

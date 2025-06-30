@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7faff;
+    overflow-x: hidden; /* Prevent horizontal scrolling caused by animations */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: #0044cc;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+header .logo img {
+    height: 50px;
+    animation: fadeIn 1s ease-in-out 0.5s;
+    animation-fill-mode: both;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    animation: fadeInRight 1.2s ease-in-out 0.7s;
+    animation-fill-mode: both;
+}
+
+header nav ul li {
+    margin-left: 2rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #cce7ff;
+}
+
+/* Hero Section */
+#hero-services {
+    text-align: center;
+    background: linear-gradient(to bottom, #0044cc, #66a3ff);
+    color: #fff;
+    padding: 4rem 1rem;
+    animation: fadeInScale 1.5s ease-in-out;
+}
+
+#hero-services h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1.2s ease-in-out;
+}
+
+#hero-services p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.4s ease-in-out;
+}
+
+/* Services Section */
+#services {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #e6f2ff;
+    visibility: visible; /* Ensure all sections are visible */
+    opacity: 1; /* Remove initial hidden state */
+    transform: translateY(0); /* Reset initial position */
+    transition: none; /* Prevent unnecessary animation delays */
+}
+
+#services h2 {
+    font-size: 2rem;
+    color: #0044cc;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    animation: fadeInDown 1s ease-out;
+}
+
+#services .service {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInScale 1.2s ease-out forwards;
+}
+
+#services .service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#services h3 {
+    color: #0044cc;
+    margin-bottom: 1rem;
+}
+
+#services p {
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Call to Action Section */
+#cta-services {
+    text-align: center;
+    background-color: #0044cc;
+    color: #fff;
+    padding: 3rem 1rem;
+    visibility: visible; /* Ensure CTA section is visible */
+    opacity: 1; /* Remove hidden state */
+    transform: translateY(0); /* Reset position */
+    transition: none; /* Prevent animation delays */
+}
+
+#cta-services h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #cce7ff;
+}
+
+#cta-services p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #e6f2ff;
+}
+
+#cta-services .btn {
+    background-color: #003399;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#cta-services .btn:hover {
+    background-color: #002266;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #003366;
+    color: #fff;
+    padding: 1.5rem 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+footer nav ul li {
+    margin: 0 1rem;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #cce7ff;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
