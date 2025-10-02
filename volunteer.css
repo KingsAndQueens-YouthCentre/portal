@@ -1,0 +1,135 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0d47a1, #1976d2, #42a5f5);
+  background-size: 400% 400%;
+  animation: bgFlow 18s ease infinite;
+  color: white;
+}
+
+@keyframes bgFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Menu Toggle */
+.menu-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  background: white;
+  color: #0d47a1;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.3s ease;
+}
+.side-menu a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Main Volunteer Content */
+.volunteer-container {
+  max-width: 700px;
+  margin: 6rem auto 3rem;
+  padding: 2rem;
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  animation: fadeUp 1.5s ease;
+  box-shadow: 0 0 30px rgba(255,255,255,0.1);
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #e3f2fd;
+}
+p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #d0e6ff;
+}
+
+/* Form Styles */
+.volunteer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+label {
+  font-weight: bold;
+  color: #e0f7fa;
+}
+
+input, textarea, select {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+}
+input:focus, textarea:focus, select:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 12px white;
+}
+
+button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background: white;
+  color: #0d47a1;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+button:hover {
+  background: #bbdefb;
+  transform: scale(1.05);
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KQYC | Volunteer</title>
+  <link rel="stylesheet" href="volunteer.css" />
+  <script defer src="volunteer.js"></script>
+</head>
+<body>
+  <!-- Hamburger Menu -->
+  <nav class="menu-toggle" id="menuToggle">&#x2261;</nav>
+
+  <!-- Side Menu -->
+  <div class="side-menu" id="sideMenu">
+    <a href="home.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <!-- Volunteer Section -->
+  <main class="volunteer-container">
+    <h1>Become a Volunteer</h1>
+    <p>
+      Ready to make a difference? Fill out the form below and help us empower the youth.
+    </p>
+
+    <form id="volunteerForm" class="volunteer-form" action="https://formspree.io/f/yourFormID" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="skills">Skills / Talents</label>
+      <textarea id="skills" name="skills" rows="4" required></textarea>
+
+      <label for="availability">Availability</label>
+      <select id="availability" name="availability" required>
+        <option value="">Select an option</option>
+        <option value="weekdays">Weekdays</option>
+        <option value="weekends">Weekends</option>
+        <option value="both">Both</option>
+      </select>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </main>
+</body>
+</html>

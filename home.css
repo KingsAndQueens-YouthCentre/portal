@@ -1,0 +1,157 @@
+/* Theme base */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0d47a1, #1976d2, #42a5f5);
+  background-size: 400% 400%;
+  animation: backgroundWave 20s ease infinite;
+  color: white;
+}
+
+/* Animated background */
+@keyframes backgroundWave {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  animation: fadeSlide 2s ease;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #d0e6ff;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mission section */
+.mission {
+  background: rgba(255,255,255,0.05);
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  animation: fadeSlide 3s ease;
+}
+
+/* Volunteer preview */
+.volunteer-preview {
+  text-align: center;
+  padding: 3rem 2rem;
+  animation: fadeSlide 4s ease;
+}
+
+.volunteer-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.volunteer-gallery img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.volunteer-gallery img:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+.volunteer-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: white;
+  color: #0d47a1;
+  border-radius: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.volunteer-button:hover {
+  background: #bbdefb;
+  transform: scale(1.05);
+}
+
+/* Menu Toggle (≡) */
+.menu-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  background: white;
+  color: #0d47a1;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Side menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.3s ease;
+}
+
+.side-menu a:hover {
+  background: rgba(255,255,255,0.1);
+}
+/* Footer Styles */
+.site-footer {
+  background: rgba(255, 255, 255, 0.1);
+  color: #d0e6ff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(5px);
+}
